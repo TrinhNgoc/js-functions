@@ -8,7 +8,6 @@ function numberToString(n) {
 	return string;
 }
 
-numberToString(5);
 /**
  * Adds one to a given number.
  * @param {number} n
@@ -18,7 +17,7 @@ function increase(n) {
 	return n + 1;
 	}
 
-increase(5);
+
 /**
  * Subtracts one from a given number.
  * @param {number} n
@@ -28,7 +27,7 @@ function decrease(n) {
 	return n - 1;
 	}
 
-decrease(5);
+
 /**
  * Adds two numbers.
  * @param {number} x
@@ -39,7 +38,7 @@ function add(x,y) {
 	return x + y;
 }
 
-add(2,3);
+
 /**
  * Subtracts the second number from the first.
  * @param {number} x
@@ -50,7 +49,7 @@ function subtract(x,y) {
 	return x - y;
 }
 
-subtract(7,2);
+
 /**
  * Multiplies two numbers.
  * @param {number} x
@@ -61,7 +60,7 @@ function multiply(x,y) {
 	return x * y;
 }
 
-multiply(5,5);
+
 /**
  * Divides the first number by the second.
  * @param {number} x
@@ -72,7 +71,7 @@ function divide(x,y) {
 	return x / y;
 }
 
-divide(25,5);
+
 /**
  * Multiplies a number by itself.
  * @param {number} x, number to be squared
@@ -82,7 +81,7 @@ function square(x) {
 	return x * x;
 }
 
-square(10);
+
 /**
  * Performs a mathematical operation on two numbers.
  * Also prints out the equation: (i.e.) "1 + 5 = 6" or "8 / 2 = 4".
@@ -114,7 +113,6 @@ function calculate(operation,x,y) {
     }
 }
 
-calculate("multiply",2,3);
 /**
  * Returns true if `a` is greater than `b`.
  * @param {number} a
@@ -130,7 +128,7 @@ function isGreaterThan(a,b) {
 	}
 }
 
-isGreaterThan(6,4);
+
 /**
  * Returns true if `a` is less than `b`.
  * @param {number} a
@@ -146,7 +144,7 @@ function isLessThan(a,b) {
 	}
 }
 
-isLessThan(4,6);
+
 /**
  * Returns true if `a` and `b` are equal.
  * @param {number} a
@@ -162,7 +160,7 @@ function areEqual(a,b) {
 	}
 }
 
-areEqual(5,5);
+
 /**
  * Returns the smallest value of two numbers.
  * @param {number} x
@@ -178,7 +176,6 @@ function minimum(x,y) {
 	}
 }
 
-minumum(10,5);
 /**
  * Returns the largest value of two numbers.
  * @param {number} x
@@ -194,7 +191,7 @@ function maximum(x,y) {
 	}
 }
 
-minimum(10,5);
+
 /**
  * Returns true if `n` is even.
  * @param {number} n
@@ -209,7 +206,7 @@ function isEven(n) {
 	}
 }
 
-isEven(6);
+
 
 /**
  * Returns true if `n` is odd.
@@ -225,7 +222,7 @@ function isOdd(n) {
 	}
 }
 
-isOdd(3);
+
 /**
  * Returns a letter grade.
  * "A": 90-100%
@@ -255,15 +252,23 @@ function letterGrade(score, total) {
 	}
 }
 
-letterGrade(59,100);
+
 /**
  * Checks if a `restaurant` object has are `views` field.
  * If it does, increase it by 1. If it does not,
  * set itsreviews` field to 1.
  * @param {object} restaurant represents a restaurant
  */
-
-/**
+function incrementReviews(restaurant) {
+  if (restaurant.reviews) {
+    restaurant.reviews++;
+  }
+  else {
+    restaurant = {reviews: 1}
+  }
+  return restaurant;
+}
+/** 
  * Joins two strings with a space.
  * @param {string} word1
  * @param {string} word2
@@ -272,7 +277,6 @@ letterGrade(59,100);
 function combine(word1, word2) {
 	return word1 + " " + word2;
 }
-combine("Hi","Ranson");
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
@@ -281,3 +285,10 @@ combine("Hi","Ranson");
  * @param {number} radius
  * @return {object} circle
  */
+function createCircle(radius) {
+  var circle = {
+    area: Math.PI * Math.pow(radius, 2),
+    circumference: Math.PI * radius * 2
+  }
+  return circle;
+}
